@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="card-container">
+    <div class="card" style="width: 18rem" *ngFor="let book of books">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ book.title }} ({{ book.yearOfPublication }})
+        </h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+          <ng-container *ngFor="let author of book.authors; let last = last">
+            {{ author.name }} {{ author.surname }}{{ !last ? " | " : "" }}
+          </ng-container>
+        </h6>
+        <p class="card-text">{{ book.description }}</p>
+        <a href="#" class="card-link">Buy</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,14 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { RestService } from './services/rest.service';
+import { Component } from '@angular/core';
+import { RestService } from '../services/rest.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-books',
+  templateUrl: './books.component.html',
+  styleUrls: ['./books.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class BooksComponent {
   books: any[] = [];
-  title = 'angular-httpclient';
 
   constructor(private api: RestService) {}
 
